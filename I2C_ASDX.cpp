@@ -1,13 +1,14 @@
 //
 //    FILE: I2C_ASDX.cpp
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.2.0
+// VERSION: 0.2.1
 // PURPOSE: I2C_asdx library for Arduino.
 //     URL: https://github.com/RobTillaart/I2C_ASDX
 //
 // HISTORY:
 // 0.1.0    2013-11-14 initial version
 // 0.2.0    2020-03-18 refactor
+// 0.2.1    2020-07-04 add getBar(), getMilliBar(), getPSI()
 //
 
 #include "I2C_ASDX.h"
@@ -15,11 +16,12 @@
 I2C_ASDX::I2C_ASDX(uint8_t address, uint8_t psi)
 {
   _address = address;
-  if (psi == 100) _maxPressure = 6895;
-  if (psi ==  60) _maxPressure = 4137;
-  if (psi ==  30) _maxPressure = 2068;
-  if (psi ==  15) _maxPressure = 1034;
-  _maxPressure = 0;  // force fail in other cases
+  _maxPressure = 0;
+  if ((psi == 100) || (psi == 60) || (psi == 30) ||
+      (psi ==  15) || (psi == 05) || (psi == 01))
+  {
+    _maxPressure = psi * PSI2MILLIBAR;
+  }
   reset();
 }
 
@@ -68,7 +70,9 @@ int I2C_ASDX::read()
     _state = I2C_ASDX_C000_ERROR;  // no documentation, bits may not be set?
     return _state;
   }
-  _pressure = map(count, 1638, 14746, 0, _maxPressure);
+  // _pressure = map(count, 1638, 14746, 0, _maxPressure);
+  // _pressure = (count - 1638) * (_maxPressure - 0) / ( 14746 - 1638);
+  _pressure = (count - 1638) * _maxPressure * 7.62892889838E-5;
   _state = I2C_ASDX_OK;
   _lastRead = millis();
   return _state;
