@@ -9,6 +9,9 @@ reset	KEYWORD2
 available	KEYWORD2
 read	KEYWORD2
 getPressure	KEYWORD2
+getMilliBar	KEYWORD2
+getBar	KEYWORD2
+gePSI	KEYWORD2
 errorCount	KEYWORD2
 lastRead	KEYWORD2
 state	KEYWORD2
