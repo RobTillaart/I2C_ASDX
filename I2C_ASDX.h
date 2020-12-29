@@ -2,7 +2,7 @@
 //
 //    FILE: I2C_ASDX.h
 //  AUTHOR: Rob Tillaart
-// VERSION: 0.2.1
+// VERSION: 0.2.2
 // PURPOSE: Arduino library for I2C ASDX pressure sensor
 //     URL: https://github.com/RobTillaart/I2C_ASDX
 //
@@ -31,7 +31,7 @@
 #define BAR2PSI            14.503773773
 
 
-#define I2C_ASDX_VERSION "0.2.0"
+#define I2C_ASDX_VERSION "0.2.2"
 
 #define I2C_ASDX_OK              1
 #define I2C_ASDX_INIT            0
@@ -49,7 +49,7 @@ public:
 #endif
   void     begin();
   void     reset();
-  bool     available();
+  bool     available();    // isConnected()
 
   // returns status OK (0) or ERROR ( not 0 )
   int      read();
