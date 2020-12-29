@@ -87,7 +87,7 @@ unittest(test_constructor)
   assertEqualFloat(14.503773773, BAR2PSI, 0.0001);
 }
 
-unittest(test_constructor)
+unittest(test_read)
 {
   fprintf(stderr, "VERSION: %s\n", I2C_ASDX_VERSION);
   I2C_ASDX sensor(0x58, 100);
