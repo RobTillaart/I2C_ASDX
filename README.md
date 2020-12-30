@@ -1,3 +1,9 @@
+
+[![Arduino CI](https://github.com/RobTillaart/I2C_ASDX/workflows/Arduino%20CI/badge.svg)](https://github.com/marketplace/actions/arduino_ci)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/RobTillaart/I2C_ASDX/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/release/RobTillaart/I2C_ASDX.svg?maxAge=3600)](https://github.com/RobTillaart/I2C_ASDX/releases)
+
+
 # I2C_ASDX
 
 Arduino library for I2C ASDX pressure sensor
