@@ -66,11 +66,13 @@ unittest(test_new_operator)
 unittest(test_constructor)
 {
   fprintf(stderr, "VERSION: %s\n", I2C_ASDX_VERSION);
-  I2C_ASDX sensor(0x58, 100);
 
-  // assertTrue(sensor.available());
+  I2C_ASDX sensor(0x58, 100);
+  sensor.begin();
+  assertTrue(sensor.available());
 
   fprintf(stderr, "Test default pressure\n");
+
   assertEqual(0, sensor.getPressure());
   assertEqual(0, sensor.getMilliBar());
   assertEqual(0, sensor.getBar());
@@ -92,9 +94,10 @@ unittest(test_constructor)
 unittest(test_read)
 {
   fprintf(stderr, "VERSION: %s\n", I2C_ASDX_VERSION);
-  I2C_ASDX sensor(0x58, 100);
 
-  // assertTrue(sensor.available());
+  I2C_ASDX sensor(0x58, 100);
+  sensor.begin();
+  assertTrue(sensor.available());
 
   fprintf(stderr, "Test default pressure\n");
   assertEqual(0, sensor.getPressure());
@@ -102,7 +105,7 @@ unittest(test_read)
   assertEqual(0, sensor.getBar());
   assertEqual(0, sensor.getPSI());
 
-  // assertEqual(I2C_ASDX_READ_ERROR, sensor.read());
+  assertEqual(I2C_ASDX_READ_ERROR, sensor.read());
 
   fprintf(stderr, "Test after read\n");
   assertEqual(0, sensor.getPressure());
