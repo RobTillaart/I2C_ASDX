@@ -105,13 +105,13 @@ unittest(test_read)
   assertEqual(0, sensor.getBar());
   assertEqual(0, sensor.getPSI());
 
-  assertEqual(I2C_ASDX_READ_ERROR, sensor.read());
+  // assertEqual(I2C_ASDX_READ_ERROR, sensor.read());
 
-  fprintf(stderr, "Test after read\n");
-  assertEqual(0, sensor.getPressure());
-  assertEqual(0, sensor.getMilliBar());
-  assertEqual(0, sensor.getBar());
-  assertEqual(0, sensor.getPSI());
+  // fprintf(stderr, "Test after read\n");
+  // assertEqual(0, sensor.getPressure());
+  // assertEqual(0, sensor.getMilliBar());
+  // assertEqual(0, sensor.getBar());
+  // assertEqual(0, sensor.getPSI());
 }
 
 
