@@ -17,7 +17,7 @@ The I2C_ASDX library can read the sensor and give the pressure in millibar, bar 
 
 The interface consists of the following:
 
-- **I2C_ASDX(address, psi)** COnstructor, I2C address and maximum pressure.
+- **I2C_ASDX(address, psi)** Constructor, I2C address and maximum pressure.
 - **begin(sda, scl)** I2C parameters for ESP32
 - **begin()** for UNO and other boards supporting Wire.
 - **reset()** resets internal variables,
@@ -27,7 +27,7 @@ The interface consists of the following:
 - **getMilliBar()** returns a float in milliBar
 - **getBar()** returns a float in bar
 - **getPSI()** returns a float in PSI = Pounds per Square Inch.
-- **errorCount()** total counter for
+- **errorCount()** total counter for errors occured
 - **lastRead()** time in millis since last succesful reading the sensor
 - **state()** last known state of read, also returned by read()
 
@@ -35,6 +35,7 @@ The interface consists of the following:
 ## Testing
 
 The library is tested with only 3 different sensors, all of the PG type.
+
 Code is prepared but not tested for 15, 5 and 1 PSI too.
 
 ```
@@ -70,6 +71,16 @@ more as long as they have the following raw read values.
 ## Testing
 
 TESTED TYPES - type A 10% - 90% only
+
+
+## Future
+
+#### Must
+
+- multiple Wire interface  (breaks interface)
+- test isCOnnected in bool begin(). (breaks interface?)
+- find a good reference for conversion formula constants.
+- 
 
 
 
