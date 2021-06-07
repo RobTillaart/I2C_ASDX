@@ -58,7 +58,7 @@ class I2C_ASDX
 {
 public:
   //      psi: 100, 60, 30, 15, 5 or 1
-  I2C_ASDX(uint8_t address, uint8_t psi, TwoWire \*wire = &Wire);
+  I2C_ASDX(uint8_t address, uint8_t psi, TwoWire *wire = &Wire);
 
 
 #if defined (ESP8266) || defined(ESP32)
