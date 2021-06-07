@@ -63,6 +63,8 @@ unittest(test_constructor)
   fprintf(stderr, "VERSION: %s\n", I2C_ASDX_VERSION);
 
   I2C_ASDX sensor(0x58, 100);
+  assertEqual(I2C_ASDX_INIT, sensor.state());
+
   assertTrue(sensor.begin());
   assertTrue(sensor.isConnected());    // incorrect, keep build happy
   assertTrue(sensor.available());      // obsolete in the future
@@ -70,7 +72,7 @@ unittest(test_constructor)
   fprintf(stderr, "test state\n");
   assertEqual(0, sensor.errorCount());
   assertEqual(0, sensor.lastRead());
-  assertEqual(I2C_ASDX_INIT, sensor.state());
+  assertEqual(I2C_ASDX_OK, sensor.state());
 }
 
 
