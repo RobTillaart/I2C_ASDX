@@ -17,7 +17,7 @@
 #include "I2C_ASDX.h"
 
 
-I2C_ASDX::I2C_ASDX(uint8_t address, uint8_t psi, TwoWire *wire = &Wire)
+I2C_ASDX::I2C_ASDX(uint8_t address, uint8_t psi, TwoWire *wire)
 {
   reset();
   _address     = address;
