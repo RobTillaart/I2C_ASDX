@@ -96,7 +96,7 @@ Code is prepared but not tested for 15, 5 and 1 PSI too.
     V = voltage (3 volt also supported, not tested)
 ```
 
-That saidm it is expected that the library is modifiable to support many
+That said it is expected that the library is modifiable to support many
 more as long as they have the following raw read values.
 
 ```
