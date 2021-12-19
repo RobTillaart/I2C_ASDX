@@ -8,7 +8,7 @@
 
 # I2C_ASDX
 
-Arduino library for I2C ASDX pressure sensor
+Arduino library for I2C ASDX pressure sensor.
 
 
 ## Description
@@ -16,7 +16,10 @@ Arduino library for I2C ASDX pressure sensor
 The ASDX sensor of Honeywell exist in many variations.
 Check the datasheet of your type for all the details.
 
-The I2C_ASDX library can read the sensor and give the pressure in millibar, bar or PSI or many other units. See below.
+The I2C_ASDX library can read the sensor and give the pressure in millibar, 
+bar or PSI or many other units. See below.
+
+Related library: https://github.com/RobTillaart/pressure
 
 
 ## Interface
@@ -60,6 +63,8 @@ will return 0 after reset() and no read done.
 - **float getCmHg()** returns pressure in centimetre mercury.
 - **float getCmH2O()** returns pressure in centimetre water.
 - **float getMSW()** returns pressure in Meters of Sea Water. (under water pressure unit).
+
+Related library: https://github.com/RobTillaart/pressure
 
 
 #### State
@@ -119,15 +124,14 @@ more as long as they have the following raw read values.
 TESTED TYPES - type A 10% - 90% only
 
 
-## Future
-
-
-- update documentation
-- find a good reference for conversion formula constants.
-- 
-
-
-
 ## Operation
 
 See examples
+
+
+## Future
+
+- update documentation
+- add real life examples if possible
+- find a good reference for conversion formula constants.
+
