@@ -5,12 +5,19 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [0.3.2]
+## [0.3.3] - 2022-12-11
+- fix keywords
+- add getAddress() - debugging
+- update readme.md
+- obsolete available() 
+- update examples, add isConnected example.
+
+
+## [0.3.2] - 2022-11-12
 - add changelog.md
 - add RP2040 to build-CI
 - clean unit test a bit
 - minor edits
-
 
 ## [0.3.0] - 2021-06-07
 - add multiWire interface

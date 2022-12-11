@@ -1,5 +1,5 @@
 //
-//    FILE: asdx_minimal.ino
+//    FILE: asdx_isConnected.ino
 //  AUTHOR: Rob Tillaart
 // PURPOSE: demo
 //     URL: https://github.com/RobTillaart/I2C_ASDX
@@ -17,7 +17,13 @@ void setup()
   Serial.begin(115200);
   Serial.println(__FILE__);
 
-  sensor.begin();
+  if (sensor.begin() == false)
+  {
+    Serial.print("Cannot find sensor:\t");
+    Serial.print(sensor.getAddress());
+    Serial.println("Check wires or try another address.");
+    while(1);
+  }
 }
 
 
@@ -41,4 +47,3 @@ void loop()
 
 
 //  -- END OF FILE --
-
