@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - update readme.md
 - obsolete available() 
 - update examples, add isConnected example.
+- fix changelog.md
 
 
 ## [0.3.2] - 2022-11-12
@@ -19,11 +20,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - clean unit test a bit
 - minor edits
 
-## [0.3.0] - 2021-06-07
-- add multiWire interface
-
 ## [0.3.1] - 2021-12-19
 - update library.json, license, minor edits
+
+
+## [0.3.0] - 2021-06-07
+- add multiWire interface
 
 ----
 
