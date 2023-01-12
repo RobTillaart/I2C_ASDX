@@ -3,10 +3,8 @@
 //    FILE: I2C_ASDX.h
 //  AUTHOR: Rob Tillaart
 // VERSION: 0.3.3
-// PURPOSE: Arduino library for I2C ASDX pressure sensor
+// PURPOSE: Arduino library for I2C ASDX pressure sensor.
 //     URL: https://github.com/RobTillaart/I2C_ASDX
-//
-// HISTORY: see changelog.md
 
 
 // TESTED TYPES - type A 10% - 90% only
@@ -71,7 +69,7 @@ public:
   void     reset();
   bool     isConnected();
   uint8_t  getAddress();
-  //  bool     available() { return isConnected(); };  // obsolete
+  //  bool     available() { return isConnected(); };  // obsolete 0.3.3
 
 
   //  returns status OK (0) or ERROR ( not 0 )
@@ -117,7 +115,7 @@ private:
 };
 
 
-// Convertors ==> see https://github.com/RobTillaart/pressure library.
+//  Convertors ==> see https://github.com/RobTillaart/pressure library.
 /*
 static float MilliBar2PSI( float mbar ) { return mbar * MILLIBAR2PSI; };
 static float MilliBar2Bar( float mbar ) { return mbar * 0.001; };

@@ -29,18 +29,25 @@ void setup()
 
 void loop()
 {
-  int state = sensor.read();
-  if (state == I2C_ASDX_OK)
+  if (sensor.isConnected() == false)
   {
-    Serial.print("mBar:\t");
-    Serial.println(sensor.getMilliBar());
-    Serial.print(" Bar:\t");
-    Serial.println(sensor.getBar());
-    Serial.print(" PSI:\t");
-    Serial.println(sensor.getPSI());
-    Serial.println();
+    Serial.println("cannot connect to sensor!");
   }
-  else Serial.println("error");
+  else
+  {
+    int state = sensor.read();
+    if (state == I2C_ASDX_OK)
+    {
+      Serial.print("mBar:\t");
+      Serial.println(sensor.getMilliBar());
+      Serial.print(" Bar:\t");
+      Serial.println(sensor.getBar());
+      Serial.print(" PSI:\t");
+      Serial.println(sensor.getPSI());
+      Serial.println();
+    }
+    else Serial.println("error");
+  }
 
   delay(1000);
 }

@@ -41,6 +41,7 @@ unittest_setup()
   fprintf(stderr, "I2C_ASDX_VERSION: %s\n", (char *) I2C_ASDX_VERSION);
 }
 
+
 unittest_teardown()
 {
 }

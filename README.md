@@ -19,6 +19,8 @@ Check the datasheet of your type for all the details.
 The I2C_ASDX library can read the sensor and give the pressure in millibar, 
 bar or PSI or many other units. See below.
 
+#### Links
+
 Related library: https://github.com/RobTillaart/pressure
 
 
@@ -53,9 +55,8 @@ Returns true if address can be found  on I2C bus.
 Returns true if address can be found  on I2C bus.
 - **void reset()** resets internal variables, including pressure.
 - **bool isConnected()** tests if address can be found on I2C bus.
-- **uint8_t getAddress()** returns I2C address used. 
+- **uint8_t getAddress()** returns I2C address used.
 Mainly for debug message.
-
 
 
 #### Read
@@ -73,7 +74,7 @@ Returns **I2C_ASDX_OK** or an error code.
 (rounded integer!).
 Returns 0 after a reset() and no read() done yet.
 Calling **getPressure()** multiple times without read() will return the same value again.
-- **float getMilliBar()** returns pressure in milliBar (float!).
+- **float getMilliBar()** returns pressure in milliBar (float).
 - **float getBar()** returns pressure in bar.
 - **float getPSI()** returns pressure in PSI = Pounds per Square Inch.
 - **float getATM()** returns pressure in Atmosphere.
@@ -104,7 +105,7 @@ Related library: https://github.com/RobTillaart/pressure
 | I2C_ASDX_CONNECT_ERROR  | I2C error          |
 
 
-#### Obsolete
+#### Obsolete 0.3.3
 
 - **bool available()** wrapper around isConnected.
 
@@ -182,5 +183,4 @@ See examples
 
 #### Wont
 - find a good reference for conversion formula constants.
-  - pressure lib?
 
